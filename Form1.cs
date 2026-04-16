@@ -207,6 +207,26 @@ namespace FileCompare
                         continue;
                     }
 
+                    if (File.Exists(dstPath))
+                    {
+                        var srcTime = File.GetLastWriteTime(srcPath);
+                        var dstTime = File.GetLastWriteTime(dstPath);
+                        var prompt = $"파일 '{fileName}'이(가) 대상 폴더에 이미 존재합니다.\n\n" +
+                                     $"보내는 쪽 수정일: {srcTime:yyyy-MM-dd HH:mm}\n" +
+                                     $"대상 쪽 수정일: {dstTime:yyyy-MM-dd HH:mm}\n\n" +
+                                     "덮어쓰시겠습니까?";
+
+                        var ask = MessageBox.Show(prompt,
+                                                   "덮어쓰기 확인",
+                                                   MessageBoxButtons.YesNo,
+                                                   MessageBoxIcon.Question);
+                        if (ask == DialogResult.No)
+                        {
+                            // skip this file
+                            continue;
+                        }
+                    }
+
                     File.Copy(srcPath, dstPath, true);
                     success++;
                 }
