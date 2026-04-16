@@ -89,7 +89,7 @@
             // 
             // txtLeftDir
             // 
-            txtLeftDir.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtLeftDir.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtLeftDir.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             txtLeftDir.Location = new Point(10, 31);
             txtLeftDir.Name = "txtLeftDir";
@@ -150,6 +150,7 @@
             listView1.TabIndex = 2;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
+            listView1.ItemActivate += listView1_ItemActivate;
             // 
             // columnHeader1
             // 
