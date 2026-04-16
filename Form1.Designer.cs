@@ -69,7 +69,7 @@
             panel3.BackColor = SystemColors.ActiveBorder;
             panel3.Controls.Add(btnLeftDir);
             panel3.Controls.Add(txtLeftDir);
-            panel3.Dock = DockStyle.Top;
+            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel3.Location = new Point(0, 97);
             panel3.Name = "panel3";
             panel3.Size = new Size(473, 83);
@@ -122,7 +122,7 @@
             // panel2
             // 
             panel2.Controls.Add(panel7);
-            panel2.Dock = DockStyle.Fill;
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(473, 556);
@@ -132,7 +132,7 @@
             // 
             panel7.BackColor = SystemColors.Desktop;
             panel7.Controls.Add(listView1);
-            panel7.Dock = DockStyle.Bottom;
+            panel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel7.Location = new Point(0, 180);
             panel7.Name = "panel7";
             panel7.Size = new Size(473, 376);
@@ -191,7 +191,7 @@
             panel1.BackColor = SystemColors.ActiveCaption;
             panel1.Controls.Add(btnCopyFromLeft);
             panel1.Controls.Add(lblAppName);
-            panel1.Dock = DockStyle.Top;
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(473, 97);
@@ -201,7 +201,7 @@
             // 
             panel5.Controls.Add(btnRightDir);
             panel5.Controls.Add(txtRightDir);
-            panel5.Dock = DockStyle.Top;
+            panel5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel5.Location = new Point(0, 97);
             panel5.Name = "panel5";
             panel5.Size = new Size(485, 83);
@@ -229,7 +229,7 @@
             // 
             panel4.BackColor = SystemColors.ControlDarkDark;
             panel4.Controls.Add(lvwRightDir);
-            panel4.Dock = DockStyle.Bottom;
+            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel4.Location = new Point(0, 180);
             panel4.Name = "panel4";
             panel4.Size = new Size(485, 376);
@@ -263,7 +263,7 @@
             // 
             panel6.BackColor = SystemColors.AppWorkspace;
             panel6.Controls.Add(btnCopyFromRight);
-            panel6.Dock = DockStyle.Top;
+            panel6.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel6.Location = new Point(0, 0);
             panel6.Name = "panel6";
             panel6.Size = new Size(485, 97);
